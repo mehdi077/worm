@@ -27,3 +27,14 @@ ssh-copy-id root@172.232.34.167
 vim modelfile
 FROM ./models/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-Q8_0-imat.gguf
 ollama create darkidol -f modelfile
+
+
+Install GitHub CLI	sudo apt install gh
+Log in	gh auth login
+Create project directory	mkdir my-project && cd my-project
+Initialize git repo	git init
+Stage files	git add .
+Commit changes	git commit -m "Initial commit"
+Create & push repo	gh repo create my-newrepo --public --source=. --remote=upstream --push
+Add remote (existing repo)	git remote add origin https://github.com/username/my-newrepo.git
+Push changes	git push -u origin master
